@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.DetailsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context="com.poc.ui.DetailsFragment">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/placeImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/Medium"
+            android:layout_marginTop="@dimen/Large"
+            android:layout_marginRight="@dimen/Large"
+            app:layout_editor_absoluteX="@dimen/Medium"
+            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Large"
+            android:orientation="vertical">
 
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Large"
+                android:layout_marginEnd="@dimen/Large"
+                android:layout_marginBottom="@dimen/Small"
+                android:textDirection="locale"
+                android:textSize="@dimen/Medium"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/placeImage"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="MissingConstraints"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Large"
+                android:layout_marginEnd="@dimen/Large"
+                android:layout_marginRight="@dimen/Large"
+                android:inputType="textMultiLine"
+                android:textDirection="locale"
+                android:textSize="@dimen/Small"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+        </LinearLayout>
+    </LinearLayout>
 </FrameLayout>

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.POC">
         <activity
-            android:name="ui.MainActivity"
+            android:name="com.poc.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
