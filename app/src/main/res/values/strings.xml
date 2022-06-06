@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">POC</string>
+    <string name="hello_blank_fragment">Details fragment</string>
+</resources>
