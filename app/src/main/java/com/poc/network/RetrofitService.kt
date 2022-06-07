@@ -10,7 +10,8 @@ import retrofit2.http.GET
 
 interface RetrofitService {
     @GET(movieList)
-    fun getAllMovies(): Call<List<Movie>>
+    suspend fun getAllMovies(): List<Movie>
+
     companion object {
         var retrofitService: RetrofitService? = null
         fun getInstance(): RetrofitService {

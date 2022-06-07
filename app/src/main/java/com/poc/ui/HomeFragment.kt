@@ -1,4 +1,6 @@
 package com.poc.ui
+
+import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.poc.R
 import com.poc.action.OnClickListener
 import com.poc.databinding.FragmentHomeBinding
+import com.poc.di.AppModule
 import com.poc.factory.MovieFactory
 import com.poc.model.Movie
 import com.poc.network.RetrofitService
@@ -20,6 +23,7 @@ import com.poc.viewModel.MovieViewModel
 class HomeFragment : Fragment(), OnClickListener {
     lateinit var viewModel: MovieViewModel
     private val retrofitService = RetrofitService.getInstance()
+    private val appModule = AppModule
     private lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,19 +34,23 @@ class HomeFragment : Fragment(), OnClickListener {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this, MovieFactory(MovieRepository(retrofitService))).get(
+        viewModel = ViewModelProvider(
+            this,
+            MovieFactory(
+                MovieRepository(
+                    retrofitService,
+                    appModule.provideDatabase(activity?.application as Application)
+                )
+            )
+        ).get(
             MovieViewModel::class.java
         )
-        viewModel.movieList.observe(viewLifecycleOwner) {
+        viewModel.response.observe(viewLifecycleOwner) {
             binding.progressbar.visibility = GONE
-            viewModel.setAdapterData(it as ArrayList<Movie>, binding.recyclerView, this)
+            viewModel.setAdapterData(it.data as ArrayList<Movie>, binding.recyclerView, this)
         }
-        viewModel.errorMessage.observe(viewLifecycleOwner) {
-        }
-        viewModel.getAllMovies()
-    }
 
+    }
     override fun onclick(movie: Movie) {
         val bundle = Bundle()
         bundle.putParcelable(AppConstant.dataPassingKey, movie)

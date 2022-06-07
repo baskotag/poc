@@ -27,10 +27,9 @@
             tools:ignore="MissingConstraints" />
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvName"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="@dimen/Large"
             android:ellipsize="end"
             android:maxLines="2"
             android:text="@{viewModel.name}"
@@ -45,7 +44,7 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvAuthor"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
