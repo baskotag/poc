@@ -10,5 +10,6 @@
     <dimen name="XXXLarge">24sp</dimen>
     <dimen name="shape_radius">8dp</dimen>
     <dimen name="button_size">54dp</dimen>
+    <dimen name="xmlarge">44dp</dimen>
     <dimen name="circle_progress">50dp</dimen>
 </resources>
