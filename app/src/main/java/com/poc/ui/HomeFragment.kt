@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.poc.MovieApplication
 import com.poc.R
 import com.poc.action.OnClickListener
 import com.poc.databinding.FragmentHomeBinding

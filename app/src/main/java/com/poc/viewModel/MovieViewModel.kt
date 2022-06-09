@@ -14,6 +14,5 @@ class MovieViewModel @Inject constructor(private val repository: MovieRepository
     fun setAdapterData(data: ArrayList<Movie>, adapter: RecyclerView, action: OnClickListener) {
         adapter.adapter = MovieAdapter(data, action)
     }
-
     val response = repository.getAllMovies().asLiveData()
 }
