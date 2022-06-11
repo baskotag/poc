@@ -26,4 +26,10 @@ class MovieListFeature {
         onView(withId(R.id.toolbar))
             .check(matches(withText(R.string.home)))
     }
+
+    @Test
+    fun displayListOfMovies() {
+       //assertRe
+
+    }
 }
