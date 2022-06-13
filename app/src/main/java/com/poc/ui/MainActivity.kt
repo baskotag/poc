@@ -10,7 +10,9 @@ import com.poc.databinding.ActivityMainBinding
 import com.poc.utility.hide
 import com.poc.utility.show
 import com.poc.viewModel.ActivityViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,7 +5,7 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.nhaarman.mockitokotlin2.times
 import com.nhaarman.mockitokotlin2.verify
-import com.poc.di.AppModule
+import com.poc.di.DIMethods
 import com.poc.network.RetrofitService
 import com.poc.repository.MovieRepository
 import com.poc.test.MainCoroutineScopeRule
@@ -24,7 +24,7 @@ class MovieViewModelShould {
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
-    val appModule = AppModule
+    val appModule = DIMethods
     val retrofitService = RetrofitService.getInstance()
 
     var movieRepository = MovieRepository(

@@ -1,19 +1,18 @@
 package com.poc.repository
-
 import androidx.room.withTransaction
 import com.poc.model.MovieDatabase
 import com.poc.network.RetrofitService
-import com.poc.utility.networkBoundResource
-import kotlinx.coroutines.runBlocking
+import com.poc.utility.taskOperator
+import javax.inject.Inject
 
-class MovieRepository constructor(
+class MovieRepository @Inject constructor(
     private val retrofitService: RetrofitService,
     private val db: MovieDatabase
 ) {
     private val movieDao = db.movieDao()
 
-    fun getAllMovies() = runBlocking {
-        networkBoundResource(
+    fun getAllMovies() =
+        taskOperator(
             query = {
                 movieDao.getAllMovies()
             },
@@ -27,5 +26,4 @@ class MovieRepository constructor(
                 }
             }
         )
-    }
 }

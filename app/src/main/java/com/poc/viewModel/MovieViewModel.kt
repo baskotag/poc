@@ -7,12 +7,15 @@ import com.poc.action.OnClickListener
 import com.poc.model.Movie
 import com.poc.repository.MovieRepository
 import com.poc.ui.MovieAdapter
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-class MovieViewModel @Inject constructor(private val repository: MovieRepository) : ViewModel() {
+@HiltViewModel
+class MovieViewModel @Inject constructor(repository: MovieRepository) : ViewModel() {
 
     fun setAdapterData(data: ArrayList<Movie>, adapter: RecyclerView, action: OnClickListener) {
         adapter.adapter = MovieAdapter(data, action)
     }
+
     val response = repository.getAllMovies().asLiveData()
 }

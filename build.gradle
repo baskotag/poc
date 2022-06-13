@@ -12,15 +12,15 @@ task clean(type: Delete) {
 ext {
     roomVersion = "2.4.2"
     hiltVersion = "2.42"
-    liveDataVersion = "2.3.1"
+    liveDataVersion = "2.4.1"
     navigationVersion = "2.4.2"
     retrofitVersion = "2.9.0"
-    gsonVersion = "2.8.6"
+    gsonVersion = "2.9.0"
     rxjavaVersion = "2.2.21"
     rxAndroidVersion = "2.1.1"
     rxKotlinVersion = "2.4.0"
     recyclerViewVersion = "1.2.1"
-    glideVersion = "4.11.0"
+    glideVersion = "4.13.0"
     androidXTestExtKotlinRunnerVersion = '1.1.3'
     espressoVersion = '3.4.0'
     junitVersion = '4.13.2'
@@ -29,8 +29,6 @@ ext {
     robolectric_version= "4.8.1"
     mockito_version= "2.21.0"
     mockito_Kotlin_version= "2.1.0"
-    coroutines_test_version= "1.3.8"
+    coroutines_test_version= "1.3.9"
     junit_ext_version= "1.1.3"
-
-
 }
