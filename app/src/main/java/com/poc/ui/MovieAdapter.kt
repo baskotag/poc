@@ -12,17 +12,15 @@ import com.poc.action.OnClickListener
 import com.poc.model.Movie
 import com.poc.databinding.MovieAdapterBinding
 
-class MovieAdapter(items: ArrayList<Movie>, action: OnClickListener) :
+class MovieAdapter(private var items: ArrayList<Movie>, private val action: OnClickListener) :
     RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
-    private var items = items
-    private val action = action
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = MovieAdapterBinding.inflate(layoutInflater)
         return MyViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: MovieAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(items[position])
         holder.itemView.setOnClickListener {
             action.onclick(items[position])

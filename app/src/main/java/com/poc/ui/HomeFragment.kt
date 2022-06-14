@@ -3,7 +3,6 @@ package com.poc.ui
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -28,7 +27,7 @@ class HomeFragment : Fragment(), OnClickListener {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -37,13 +36,7 @@ class HomeFragment : Fragment(), OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         viewModel.response.observe(viewLifecycleOwner)
         {
-
-            binding.progressbar.isVisible =  it is ServiceStates.Loading && it.data.isNullOrEmpty()
-//            progressBar.isVisible = result is Resource.Loading && result.data.isNullOrEmpty()
-//            textViewError.isVisible = result is Resource.Error && result.data.isNullOrEmpty()
-//            textViewError.text = result.error?.localizedMessage
-
-            //binding.progressbar.visibility = GONE
+            binding.progressbar.isVisible = it is ServiceStates.Loading && it.data.isNullOrEmpty()
             viewModel.setAdapterData(it.data as ArrayList<Movie>, binding.recyclerView, this)
         }
     }

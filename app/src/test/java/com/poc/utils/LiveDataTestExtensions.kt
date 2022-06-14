@@ -1,10 +1,11 @@
-package com.poc.test
+
+package com.poc.utils
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 
-class LiveDataValueCapture<T>
-{
+class LiveDataValueCapture<T> {
+
     val lock = Any()
     private val _values = mutableListOf<T?>()
     val values: List<T?>
@@ -29,6 +30,7 @@ inline fun <T> LiveData<T>.captureValues(block: LiveDataValueCapture<T>.() -> Un
         removeObserver(observer)
     }
 }
+
 fun <T> LiveData<T>.getValueForTest(): T? {
     var value: T? = null
     var observer = Observer<T> {

@@ -1,4 +1,4 @@
-package com.poc.test
+package com.poc.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

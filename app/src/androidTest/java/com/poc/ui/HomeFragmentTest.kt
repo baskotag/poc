@@ -24,9 +24,9 @@ class HomeFragmentTest : TestCase() {
 
     @Test
     fun testUIData() {
-        onView(withId(R.id.tvName)).check { view, noViewFoundException -> }
-        onView(withId(R.id.tvAuthor)).check { view, noViewFoundException -> }
-        onView(withId(R.id.placeImage)).check { view, noViewFoundException -> }
+        onView(withId(R.id.tvName)).check { _, _ -> }
+        onView(withId(R.id.tvAuthor)).check { _, _ -> }
+        onView(withId(R.id.placeImage)).check { _, _ -> }
     }
 
 

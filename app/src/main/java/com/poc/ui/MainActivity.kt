@@ -2,7 +2,6 @@ package com.poc.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.poc.R
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -21,10 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding.activityViewModel = ActivityViewModel()
         setContentView(binding.rootView)
         setSupportActionBar(binding.toolbar)
-
         setupNavigation()
-
-        //binding.toolbar.se
     }
 
     private fun setupNavigation() {
