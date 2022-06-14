@@ -7,7 +7,7 @@
     tools:context="com.poc.ui.DetailsFragment">
 
     <LinearLayout
-        android:layout_marginTop="@dimen/xmlarge"
+        android:layout_marginTop="@dimen/XMLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

@@ -13,7 +13,7 @@ import io.reactivex.disposables.Disposable
 import java.util.concurrent.TimeUnit
 class SplashFragment : Fragment()
 {
-    var disposable: Disposable? = null
+    private var disposable: Disposable? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

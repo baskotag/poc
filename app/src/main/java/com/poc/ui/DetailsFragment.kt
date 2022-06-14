@@ -16,7 +16,7 @@ class DetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val bundle = arguments
         movie = bundle?.get(DATA_PASSING_KEY) as Movie
         binding = FragmentDetailsBinding.inflate(layoutInflater, container, false)
