@@ -11,8 +11,6 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class MovieListFeature {
-//    val mActivityTestRule = ActivityTestRule(MainActivity::class.java)
-//        @Rule get
     @Test
     suspend fun displayScreenTitle() {
         onView(withId(R.id.rootView))
@@ -26,6 +24,6 @@ class MovieListFeature {
 
     @Test
     fun displayListOfMovies() {
-       //assertRe
+        //assertRe
     }
 }
