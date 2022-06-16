@@ -9,6 +9,7 @@
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/rootView"
+    android:background="@color/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.poc.ui.MainActivity">
@@ -24,7 +25,6 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            style="@style/ToolBarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -38,10 +38,10 @@
 
     <fragment
         android:id="@+id/containerFragment"
-        android:layout_marginTop="@dimen/Large"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBaseline_toBottomOf="@id/appBarLayout"
         app:defaultNavHost="true"
         app:navGraph="@navigation/app_navigation" />
 

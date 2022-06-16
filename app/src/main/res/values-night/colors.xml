@@ -4,10 +4,8 @@
     <color name="colorPrimaryDark">#260e04</color>
     <color name="colorAccent">#455a64</color>
 
-
-    <color name="colorBackground">#F9FFFF</color>
-    <color name="mainTextColor">#FF000000</color>
-
+    <color name="colorBackground">#FF000000</color>
+    <color name="mainTextColor">#F9FFFF</color>
 
     <color name="colorPrimaryText">#ffffff</color>
     <color name="colorSecondaryText">#ffffff</color>
@@ -30,13 +28,11 @@
     <color name="black_overlay">#66000000</color>
 
 
-
     <color name="color_success">#5cb85c</color>
     <color name="color_info">#337ab7</color>
     <color name="color_warning">#f0ad4e</color>
     <color name="color_error">#d9534f</color>
     <color name="color_default">#D4d6d7</color>
-
 
 
     <color name="colorDividerDark">#141B20</color>

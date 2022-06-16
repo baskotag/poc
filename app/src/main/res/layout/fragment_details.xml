@@ -39,7 +39,7 @@
 
                 android:textSize="@dimen/Medium"
                 android:textStyle="bold"
-                android:textColor="@color/color_default"
+                android:textColor="@color/mainTextColor"
                 app:layout_constraintStart_toEndOf="@+id/placeImage"
                 app:layout_constraintVertical_chainStyle="packed"
                 tools:ignore="MissingConstraints" />
@@ -51,7 +51,7 @@
                 android:layout_marginLeft="@dimen/Large"
                 android:layout_marginEnd="@dimen/Large"
                 android:layout_marginRight="@dimen/Large"
-                android:textColor="@color/color_default"
+                android:textColor="@color/mainTextColor"
                 android:inputType="textMultiLine"
                 android:textDirection="locale"
                 android:textSize="@dimen/Small"
